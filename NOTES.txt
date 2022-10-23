@@ -1,0 +1,12 @@
+Notes for Day 2 homework for React class.
+
+Skills used, starting with newest skill:
+    -"STATE", what it is and how it's used
+        -see App.js
+    -".map", using ".map" to copy data from an array into a React Componet.
+        -see file App.js
+    -"KEY" setting a key value for items brought in by ".map"
+        -see file App.js
+    -"PROPS" using props(properties).  
+        -see file Color-Block.js
+    
