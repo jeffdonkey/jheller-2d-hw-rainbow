@@ -1,6 +1,9 @@
 Notes for Day 2 homework for React class.
 
 Skills used, starting with newest skill:
+    -"SPREAD OPERATOR"
+        -see App.js, ColorForm.js (const handleSubmit...)
+        -spread operator can be used to break an array apart into individual elements
     -"STATE", what it is and how it's used
         -see App.js
     -".map", using ".map" to copy data from an array into a React Componet.

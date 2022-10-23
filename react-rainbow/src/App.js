@@ -19,26 +19,36 @@ function App() {
     'orange', 'red'
   ])
 
-    // colors.map iterates over the "colors" array above
-    // in the return statement ths individual colors of the
-    // array are sent to ColorBlock.js.  Now that ColorBlock has
-    // data ColorBlock sends back it's <div> elements into
-    // colorMap.
-    // "key={i}" creates a key value for each entry of color from the array
+  // colors.map iterates over the "colors" array above
+  // in the return statement ths individual colors of the
+  // array are sent to ColorBlock.js.  Now that ColorBlock has
+  // data ColorBlock sends back it's <div> elements into
+  // colorMap.
+  // "key={i}" creates a key value for each entry of color from the array
   let colorMap = colors.map((color, i) => {
     return (
       <ColorBlock key={i} color={color} />
     )
   })
+
+  //function below thakes a new color as an argument,
+  //it also sets the value of "colors", our State array, to a new array
+  //that contains all previous elements of the old array
+  //with the new color concatenated at the end
+  const addColor = (newColor) => {
+    setColors([...colors, newColor])
+  }
+
   return (
     // below the colorMap is sent to browser for display
     // the ColorForm is also sent
+    //ColorForm also has addColor.  This should add user
+    //selected colors from the form to render.
     <div className="App">
       {colorMap}
-      < ColorForm />
+      < ColorForm addColor={addColor}/>
     </div>
   )
-  
 }
 
 export default App;
